@@ -1,0 +1,29 @@
+import {Link} from "react-router-dom";
+import Book from "../components/Book";
+
+const SearchPage = (props) => {
+  return (
+    <div className="search-books">
+      <div className="search-books-bar">
+        <Link
+          className="close-search"
+          to={'/'}
+        >
+          Close
+        </Link>
+        <div className="search-books-input-wrapper">
+          <input
+            type="text"
+            placeholder="Search by title, author, or ISBN"
+          />
+        </div>
+      </div>
+      <div className="search-books-results">
+        <ol className="books-grid">
+          {props.books.map((book) => <Book key={book.id} book={book}/>)}
+        </ol>
+      </div>
+    </div>
+  );
+}
+export default SearchPage;
