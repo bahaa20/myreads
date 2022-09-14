@@ -175,3 +175,9 @@ body,
   text-align: center;
   font-size: 0.8em;
 }
+.modal-content {
+  border: none !important;
+  background: transparent !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+}

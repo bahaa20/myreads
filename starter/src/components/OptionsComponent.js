@@ -1,8 +1,10 @@
-const OptionsComponent = ({status}) => {
+const OptionsComponent = ({setBookShelf,book}) => {
   return (
     <div className="book-shelf-changer">
-      <select defaultValue={status}>
-        <option value="none" disabled>
+      <select defaultValue={(book.shelf??"none")} onChange={(event) => {
+        setBookShelf(book,event.target.value);
+      }}>
+        <option value="0" disabled>
           Move to...
         </option>
         <option value="currentlyReading">
