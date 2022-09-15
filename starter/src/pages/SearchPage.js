@@ -24,9 +24,11 @@ const SearchPage = ({myBooks, setBookShelf}) => {
           }
         })
         setSearchBooks(searchBookResult);
-      }else{
+      } else {
         setSearchBooks([]);
       }
+    } else {
+      setSearchBooks([]);
     }
     setLoading(false)
   }
